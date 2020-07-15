@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class DatapacSummary extends StatelessWidget {
+  // final String datapacSummary;
+
+  // DatapacSummary(this.datapacSummary);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,6 +17,9 @@ class DatapacSummary extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
       ),
       child: Text('...'),
+      // child: Text(this.datapacSummary.isEmpty || this.datapacSummary == null
+      //     ? '...'
+      //     : this.datapacSummary),
     );
   }
 }

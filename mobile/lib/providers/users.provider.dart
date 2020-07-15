@@ -7,4 +7,8 @@ class UsersProvider with ChangeNotifier {
   User get currentUser {
     return this.currentUser;
   }
+
+  updateUser(User user) {
+    this.user = user;
+  }
 }

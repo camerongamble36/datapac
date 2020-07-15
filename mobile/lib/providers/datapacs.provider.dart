@@ -7,28 +7,35 @@ import 'package:flutter/material.dart';
 
 class DatapacsProvider with ChangeNotifier {
   List<Datapac> datapacs = [];
-
+  List<Datapac> userDatapacs = [];
   List<Datapac> get allPacs {
-    return this.datapacs;
+    return [...this.datapacs];
   }
 
-  void addNewDatapac(Datapac datapac) {
+  Future<void> addNewDatapac(Datapac datapac) {
     // Send this to an ethereum client node
-    const url = '';
-    http
-        .post(url,
-            body: json.encode({
-              // Encode json data or Eth ABI?
-            }))
-        .then((value) {
-      final newPac = Datapac(
-        title: datapac.title,
-        imageUrl: datapac.imageUrl,
-      );
+    // const url = '';
+    // http
+    //     .post(url,
+    //         body: json.encode({
+    //           // Encode json data or Eth ABI?
+    //         }))
+    //     .then((value) {
+    //   final newPac = Datapac(
+    //     title: datapac.title,
+    //     imageUrl: datapac.imageUrl,
+    //   );
 
-      this.datapacs.add(newPac);
-    });
-    // Send this to an ethereuam client node
+    //   this.datapacs.add(newPac);
+    // });
+    // Send this to an ethereum client node
+    try {
+      this.datapacs.add(datapac);
+      print('submitted datapac');
+      notifyListeners();
+    } catch (error) {
+      print(error);
+    }
   }
 
   Datapac getDatapac(String id) {

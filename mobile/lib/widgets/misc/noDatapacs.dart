@@ -5,9 +5,16 @@ class NoDatapacs extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
-        children: <Widget>[
-          Icon(Icons.not_interested),
-          Text('No pacs'),
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CircleAvatar(
+            radius: 24,
+            child: Icon(Icons.not_interested),
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          Text('No Datapacs'),
         ],
       ),
     );

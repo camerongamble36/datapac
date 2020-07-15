@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class DatapacKeyMetrics extends StatelessWidget {
+  // final List<String> metrics;
+
+  // DatapacKeyMetrics(this.metrics);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,11 +14,22 @@ class DatapacKeyMetrics extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+              // this.metrics.contains('rank')
+              //     ? Column(
+              //         children: [
+              //           CircleAvatar(
+              //             radius: 24,
+              //             child: Text('23'),
+              //           ),
+              //           Text('Rank')
+              //         ],
+              //       )
+              //     :
               Column(
                 children: [
                   CircleAvatar(
                     radius: 24,
-                    child: Text('23'),
+                    child: Text('N/A'),
                   ),
                   Text('Rank')
                 ],
